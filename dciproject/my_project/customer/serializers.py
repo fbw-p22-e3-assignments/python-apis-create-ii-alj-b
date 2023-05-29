@@ -1,8 +1,6 @@
 #new - whole script added by instructor
 from rest_framework import serializers 
-from rest_framework.exceptions import ValidationError
-from rest_framework.validators import UniqueTogetherValidator, UniqueForYearValidator
-from datetime import date
+from rest_framework.validators import UniqueForYearValidator
 from .models import Customer      
 
 class CustomerSerializer(serializers.ModelSerializer):
@@ -14,7 +12,7 @@ class CustomerSerializer(serializers.ModelSerializer):
         validators = [
             UniqueForYearValidator(
                 queryset=Customer.objects.all(),
-                fields='name',
+                field='name',
                 date_field='created'
             )
         ]
