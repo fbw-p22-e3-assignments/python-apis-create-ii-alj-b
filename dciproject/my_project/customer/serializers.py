@@ -1,7 +1,7 @@
 #new - whole script added by instructor
 from rest_framework import serializers 
 from rest_framework.exceptions import ValidationError
-from rest_framework.validators import UniqueTogetherValidator
+from rest_framework.validators import UniqueTogetherValidator, UniqueForYearValidator
 from datetime import date
 from .models import Customer      
 
