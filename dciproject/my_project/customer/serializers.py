@@ -11,3 +11,10 @@ class CustomerSerializer(serializers.ModelSerializer):
         model = Customer
         fields = ['pk', 'name', 'email', 'created']
 
+        validators = [
+            UniqueForYearValidator(
+                queryset=Customer.objects.all(),
+                fields='name',
+                date_field='created'
+            )
+        ]
