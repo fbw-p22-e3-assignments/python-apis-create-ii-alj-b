@@ -9,3 +9,9 @@ class ProductSerializer(serializers.ModelSerializer):
         model = Product
         fields = ['name', 'description', 'id', 'created', 'image', 'category']
 
+        validators = [
+            UniqueTogetherValidator(
+                queryset=Product.objects.all(),
+                fields=['name', 'image']
+            )
+        ]
