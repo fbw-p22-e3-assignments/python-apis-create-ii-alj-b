@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'customer',  # new
     'product',  # new
     'rest_framework.authtoken',  # new
+    "sanitizer",
 ]
 
 MIDDLEWARE = [
