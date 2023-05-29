@@ -1,5 +1,7 @@
 #new - whole script added by instructor
 from rest_framework import serializers 
+from rest_framework.exceptions import ValidationError
+from datetime import date
 from .models import Customer
 
 class CustomerSerializer(serializers.ModelSerializer):
