@@ -1,4 +1,5 @@
 from django.db import models
+from sanitizer.models import SanitizedCharField, SanitizedTextField
 
 # Create your models here.
 
